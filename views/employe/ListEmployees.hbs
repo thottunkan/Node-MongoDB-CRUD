@@ -1,0 +1,34 @@
+<section>
+    <div class="container">
+        <div class="row" style="margin-top: 70px;">
+            <div class="col">
+                <div class="wrapper">
+                    <h3>ALL EMPLOYEES</h3>
+                    <table class="table ">
+                    <thead>
+                        <td><b>Name</b></td>
+                        <td>Email</td>
+                        <td>Phone</td>
+                        <td>Address</td>
+                        <td>Company</td>
+                        <td></td>
+                        <td></td>   
+                    </thead>
+                    {{#each data}}
+                        <tr>
+                            <td>{{this.name}}</td>
+                            <td>{{this.email}}</td>
+                            <td>{{this.phone}}</td>
+                            <td>{{this.address}}</td>
+                            <td>{{this.company}}</td>
+                            <td><a href="list/{{this._id}}/edit" class="btn btn-secondary">EDIT</a></td>
+                            <td><a href="list/{{this._id}}/delete" class="btn btn-danger" >DELETE</a></td>
+                        </tr>
+                    {{/each}}
+                </table>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
