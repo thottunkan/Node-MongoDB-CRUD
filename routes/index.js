@@ -1,5 +1,6 @@
 var express = require('express');
 var dbobj = require("../db/connection");
+const { v4 : uuid} = require('uuid')
 var router = express.Router();
 
 /* GET home page. */
@@ -10,6 +11,7 @@ router.get('/', function(req, res, next) {
 router.post("/addemp",(req,res)=>{
    
     var empobj = {
+      empid:uuid(),
       name:req.body.name,
       email:req.body.email,
       phone:req.body.phone,

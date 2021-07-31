@@ -1,0 +1,47 @@
+<section>
+
+    <div class="container" >
+       
+        <center>
+        <div class="row" style="width: 600px;margin-top: 70px;">
+            <div class="col">
+                <div class="wrapper">
+                    <div class="row">
+                        <div class="col">
+                            <h2>UPDATE EMPLOYEE</h2>
+                        </div>
+                    </div>
+                    {{#each data}}
+                     <form method="POST" action="/list/{{this.empid}}/edit/update">
+                        <table class="table table-borderless">
+                            
+                            <tr>
+                                <td><input type="text" name="name" value="{{this.name}}" class="form-control" placeholder="Name"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="email"  value="{{this.email}}" class="form-control" placeholder="Email"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="phone"  value="{{this.phone}}" class="form-control" placeholder="Phone"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="address"  value="{{this.address}}" class="form-control" placeholder="Address"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="company"  value="{{this.company}}" class="form-control" placeholder="Company"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="submit" class="btn form-control btn-primary" value="UPDATE" ></td>
+                            </tr>
+                            {{/each}}
+                        </table>
+                 </form>
+                </div>
+               
+            </div>
+        </div>
+        </center>
+    </div>
+    
+
+</section>
